@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <include layout="@layout/view_loading"/>
+
+    <include layout="@layout/view_error"/>
+
+
+    <ImageView
+        android:id="@+id/profileHeaderPic"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/profile_pic_header_height"
+        android:alpha="0"
+        android:background="@color/primary_light"
+        android:scaleType="centerCrop"
+        />
+
+    <github.chenupt.dragtoplayout.DragTopLayout
+        android:id="@+id/contentView"
+        xmlns:dtl="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        dtl:dtlCollapseOffset="@dimen/profile_header_collapsed_height"
+        dtl:dtlOverDrag="false"
+        >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="4dp">
+
+            <View
+                android:id="@+id/fadingToolbarHelper"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profile_pic_header_height"
+                android:alpha="0"
+                android:background="@color/primary"
+                />
+
+
+            <com.astuetz.PagerSlidingTabStrip
+                android:id="@+id/tabs"
+                xmlns:psts="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/profile_tabs_height"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="2dp"
+                android:paddingLeft="56dp"
+                android:paddingRight="56dp"
+                android:textColor="#AAFFFFFF"
+                psts:pstsIndicatorHeight="0dp"
+                psts:pstsTextAlpha="80"
+                />
+
+            <View
+                android:id="@+id/separatorLine"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_gravity="bottom"
+                android:alpha="0"
+                android:background="@color/primary_dark"
+                />
+
+        </FrameLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?android:attr/windowBackground"
+            />
+
+
+    </github.chenupt.dragtoplayout.DragTopLayout>
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/abc_action_bar_default_height_material"
+        android:alpha="0"
+        android:background="@null"
+        android:colorControlNormal="@color/white"
+        >
+
+        <TextView
+            android:id="@+id/toolbarTitle"
+            style="@style/Base.TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:alpha="0"
+            android:gravity="center"
+            />
+
+    </android.support.v7.widget.Toolbar>
+
+</FrameLayout>
