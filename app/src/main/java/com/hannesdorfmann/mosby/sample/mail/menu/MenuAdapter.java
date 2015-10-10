@@ -32,6 +32,9 @@ import java.util.List;
 
 /**
  * @author Hannes Dorfmann
+ *
+ * @see com.hannesdorfmann.annotatedadapter.support.recyclerview.SupportAnnotatedAdapter
+ * Comments AnnotatedAdpater generates that boilerplate code for you
  */
 public class MenuAdapter extends ListAdapter<List<Label>> implements MenuAdapterBinder {
 

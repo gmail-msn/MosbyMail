@@ -18,6 +18,7 @@ package com.hannesdorfmann.mosby.sample.mail.mails;
 
 import com.hannesdorfmann.mosby.sample.mail.base.view.BaseMailView;
 import com.hannesdorfmann.mosby.sample.mail.model.mail.Mail;
+
 import java.util.List;
 
 /**
@@ -25,5 +26,5 @@ import java.util.List;
  */
 public interface MailsView extends BaseMailView<List<Mail>> {
 
-  public void changeLabel(Mail mail, String label);
+    public void changeLabel(Mail mail, String label);
 }

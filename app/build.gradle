@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
 apply from: '../findbugs.gradle'
 
-
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
@@ -26,7 +25,6 @@ android {
         }
     }
 }
-
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
@@ -68,10 +66,9 @@ dependencies {
     apt 'com.google.dagger:dagger-compiler:' + rootProject.ext.dagger2Version
     compile 'javax.annotation:javax.annotation-api:1.2'
 
-
     compile 'com.squareup.leakcanary:leakcanary-android:' + rootProject.ext.leakcanaryVersion
 
-
+    //Test
     testCompile 'junit:junit:4.12'
     testCompile 'org.robolectric:robolectric:' + rootProject.ext.robolectricVersion
     provided 'com.google.code.findbugs:annotations:3.0.0'

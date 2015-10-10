@@ -32,7 +32,7 @@ import com.hannesdorfmann.mosby.sample.mail.base.view.viewstate.AuthViewState;
 import javax.inject.Inject;
 
 /**
- * Base fragment that handles displaying Authentication state and LCE. Also includes Butterknife,
+ * Base fragment that handles displaying Authentication state and LCE. Also includes ButterKnife,
  * FragmentArgs and Icepick
  *
  * @author Hannes Dorfmann

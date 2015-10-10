@@ -34,7 +34,7 @@ import com.hannesdorfmann.mosby.mvp.viewstate.lce.MvpLceViewStateFragment;
 import icepick.Icepick;
 
 /**
- * Base LCE ViewState Fragment for this app that uses Butterknife, Icepick and dependency injection
+ * Base LCE ViewState Fragment for this app that uses ButterKnife, Icepick and dependency injection
  *
  * @author Hannes Dorfmann
  */
@@ -44,6 +44,7 @@ public abstract class BaseLceFragment<CV extends View, M, V extends MvpLceView<M
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //read @Arg attributes
         FragmentArgs.inject(this);
     }
 
