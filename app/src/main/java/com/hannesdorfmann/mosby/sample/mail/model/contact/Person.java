@@ -31,24 +31,24 @@ import java.util.GregorianCalendar;
 @ParcelablePlease
 public class Person implements Parcelable {
 
-    public static final String MAIL_TED = "ted@mosby.com";
-    public static final String MAIL_MARSHALL = "marshall@eriksen.com";
-    public static final String MAIL_ROBIN = "robin@metronews1.com";
-    public static final String MAIL_LILY = "lily@aldrin.com";
-    public static final String MAIL_BARNEY = "barney@legendary.me";
+    public static final String MAIL_TED = "teddy@163.com";
+    public static final String MAIL_MARSHALL = "marshall@hotmail.com";
+    public static final String MAIL_ROBIN = "robin@yahoo.com";
+    public static final String MAIL_LILY = "lily@263.com";
+    public static final String MAIL_BARNEY = "barney@sohu.com";
 
-    public static final Person TED = new Person(1, "Ted Mosby", Person.MAIL_TED, R.drawable.ted,
+    public static final Person TED = new Person(1, "Teddy", Person.MAIL_TED, R.drawable.ted,
             new GregorianCalendar(1978, 3, 25).getTime(), R.string.bio_ted);
     public static final Person MARSHALL =
-            new Person(2, "Marshall Eriksen", Person.MAIL_MARSHALL, R.drawable.marshall,
+            new Person(2, "娃娃", Person.MAIL_MARSHALL, R.drawable.marshall,
                     new GregorianCalendar(1978, 0, 1).getTime(), R.string.bio_marshall);
     public static final Person ROBIN =
-            new Person(3, "Robin Scherbatsky", Person.MAIL_ROBIN, R.drawable.robin,
+            new Person(3, "佐伊", Person.MAIL_ROBIN, R.drawable.robin,
                     new GregorianCalendar(1980, 6, 23).getTime(), R.string.bio_robin);
-    public static final Person LILY = new Person(4, "Lily Aldrin", Person.MAIL_LILY, R.drawable.lily,
+    public static final Person LILY = new Person(4, "Lily", Person.MAIL_LILY, R.drawable.lily,
             new GregorianCalendar(1978, 0, 1).getTime(), R.string.bio_lily);
     public static final Person BARNEY =
-            new Person(5, "Barney Stinson", Person.MAIL_BARNEY, R.drawable.barney,
+            new Person(5, "琳琳", Person.MAIL_BARNEY, R.drawable.barney,
                     new GregorianCalendar(1974, 0, 1).getTime(), R.string.bio_barney);
 
     int id;

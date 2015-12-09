@@ -80,9 +80,9 @@ public abstract class AuthFragment<AV extends View, M, V extends AuthView<M>, P 
     @Override
     protected String getErrorMessage(Throwable e, boolean pullToRefresh) {
         if (pullToRefresh) {
-            return "An error has occurred!";
+            return "欧欧,发生错误啦!";
         } else {
-            return "An error has occurred. Click here to retry";
+            return "发生错误啦. 点击这里重试";
         }
     }
 

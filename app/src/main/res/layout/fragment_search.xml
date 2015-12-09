@@ -36,7 +36,7 @@
         android:id="@+id/searchEditView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Search word ..."
+        android:hint="@string/search_msg_hint"
         android:textCursorDrawable="@drawable/text_cursor"
         android:textSize="14sp"
         app:met_baseColor="@color/white"

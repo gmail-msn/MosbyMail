@@ -27,7 +27,7 @@ public class DefaultAccountManagerTest {
 
   @Test public void loginSuccessful() {
     AccountManager manager = new DefaultAccountManager();
-    manager.doLogin(new AuthCredentials("ted", "robin")).subscribe(new Subscriber<Account>() {
+    manager.doLogin(new AuthCredentials("teddy", "teddy")).subscribe(new Subscriber<Account>() {
       @Override public void onCompleted() {
       }
 
@@ -36,7 +36,7 @@ public class DefaultAccountManagerTest {
       }
 
       @Override public void onNext(Account account) {
-        Assert.assertEquals("Ted Mosby", account.getName());
+        Assert.assertEquals("Teddy", account.getName());
       }
     });
   }

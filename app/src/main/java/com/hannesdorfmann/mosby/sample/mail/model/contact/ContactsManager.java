@@ -20,8 +20,8 @@ public class ContactsManager {
             public Observable<List<ProfileScreen>> call() {
 
                 List<ProfileScreen> screens = new ArrayList<ProfileScreen>();
-                screens.add(new ProfileScreen(ProfileScreen.TYPE_MAILS, "Mails"));
-                screens.add(new ProfileScreen(ProfileScreen.TYPE_ABOUT, "About"));
+                screens.add(new ProfileScreen(ProfileScreen.TYPE_MAILS, "邮件"));
+                screens.add(new ProfileScreen(ProfileScreen.TYPE_ABOUT, "简介"));
 
                 return Observable.just(screens);
             }

@@ -37,7 +37,7 @@
         android:id="@+id/username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Username"
+        android:hint="@string/login_msg_user_name"
         android:textCursorDrawable="@drawable/text_cursor"
         android:layout_marginRight="@dimen/login_editbox_margin_right"
         app:met_iconLeft="@drawable/ic_username"
@@ -51,7 +51,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
-        android:hint="Password"
+        android:hint="@string/login_msg_password"
         android:layout_marginTop="@dimen/space_login_form"
         android:textCursorDrawable="@drawable/text_cursor"
         android:layout_marginRight="@dimen/login_editbox_margin_right"
@@ -68,15 +68,15 @@
         android:layout_marginTop="32dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:text="Sign in"
+        android:text="@string/login_msg_login_btn"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         android:textAllCaps="false"
         app:pb_colorComplete="@color/green_complete"
         app:pb_colorNormal="@color/accent"
         app:pb_colorPressed="@color/accent_dark"
-        app:pb_textComplete="Successful"
-        app:pb_textProgress="Loading"
+        app:pb_textComplete="@string/login_msg_success"
+        app:pb_textProgress="@string/login_msg_loading"
         />
 
 
@@ -86,7 +86,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/red"
         android:textSize="14sp"
-        android:text="Bad username or password"
+        android:text="@string/login_msg_user_pwd_bad"
         android:visibility="gone"
         android:layout_gravity="center"
         android:layout_marginTop="8dp"
@@ -100,7 +100,7 @@
         android:layout_marginRight="16dp"
         android:textSize="10sp"
         android:textColor="@color/secondary_text"
-        android:text="Hint:\nusername = ted   password = robin"
+        android:text="@string/login_msg_login_user_pwd_hint"
 
         />
 

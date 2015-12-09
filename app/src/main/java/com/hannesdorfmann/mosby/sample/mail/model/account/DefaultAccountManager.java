@@ -43,7 +43,7 @@ public class DefaultAccountManager implements AccountManager {
                     e.printStackTrace();
                 }
 
-                if (credentials.getUsername().equals("ted") && credentials.getPassword().equals("robin")) {
+                if (credentials.getUsername().equals("teddy") && credentials.getPassword().equals("teddy")) {
                     currentAccount = new Account();
                     return Observable.just(currentAccount);
                 }

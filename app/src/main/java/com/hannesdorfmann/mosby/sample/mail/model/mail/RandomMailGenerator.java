@@ -34,149 +34,75 @@ public class RandomMailGenerator implements MailGenerator {
     public Random random = new Random();
 
     private String[] hiTed = new String[]{
-            "Hi Ted! ", "Yo Ted! ", "Hi Bro! ", "Hey Bro!", "Dude! ", "Dear Ted! ",
-            "Ted Ted Teddy Bear! ", "Yo Teddy Bear!", "What's up? ", "Hey, what's going on?",
-            "Hello Ted. "
+            "Hi Teddy! ", "Yo Teddy! ", "Hi 美女! ", "Hey 兄弟!", "哥们! ", "Dear Teddy! ",
+            "任务已经安排! ", "项目已经启动!", "开会啦? ", "Hey, 进展怎样啦?",
+            "Hello Teddy. "
     };
 
     private String[] subjects = new String[]{
-            "Tonight at MacLaren’s", "Beer at MacLaren’s", "Laser tag", "Challenge accepted", "Yo Dude",
-            "Hey Bro", "What's up?", "Party tonight", "Hanging out", "Wear Suits!"
+            "开题", "Bug跟踪", "需求会议", "代码Review", "培训",
+            "Bug修复", "项目上线", "今晚开 Party", "紧急上线", "采购设备"
     };
 
     private String[] barneyQuotes = new String[]{
-            "Think of me like Yoda, but instead of being little and\n"
-                    + "green I wear suits and I’m awesome. I’m your bro—I’m Broda!",
-            "Okay, pep talk! You can do this, but to be more\n"
-                    + "accurate, you probably can’t. You’re way out of practice and she’s way too hot\n"
-                    + "for you. So, remember, it’s not about scoring. It’s about believing you can do\n"
-                    + "it, even though you probably can’t. Go get ‘em, tiger!",
-            "“It’s gonna be legend-... wait for it… and I hope\n"
-                    + "you’re not lactose intolerant because the second half of that word is DAIRY!”",
-            "Jesus waited threedays to come back to life. It was perfect! If he had only waited one day, a lot of people wouldn’t have even heard he\n"
-                    + "died. They’d be all, “Hey Jesus, what up?” and Jesus would probably\n"
-                    + "be like, “What up? I died yesterday!” \n"
-                    + "and they’d be all, “Uh, you look pretty alive to me, dude…” and\n"
-                    + "then Jesus would have to explain how he was resurrected, and how it was a\n"
-                    + "miracle, and the dude’d be like “Uhh okay, whatever you say, bro…” \n"
-                    + "And he’s not gonna come back on a Saturday. Everybody’s busy, doing chores, workin’ the loom, trimmin’ the beard,\n"
-                    + "NO. He waited the perfect number of days, three. Plus it’s Sunday, so\n"
-                    + "everyone’s in church already, and they’re all in there like “Oh no, Jesus\n"
-                    + "is dead”, and then BAM! He bursts in the back door, runnin’ up the aisle,\n"
-                    + "everyone’s totally psyched, and FYI, that’s when he invented the high five.\n"
-                    + "That’s why we wait three days to call a woman, because that’s how long Jesus\n"
-                    + "wants us to wait…. True story.",
-            "In my body, where the shame gland should be, there is\n"
-                    + "a second awesome gland. True story.",
-            "Oh right, because there can be too many of something\n"
-                    + "wonderful. Hey Babe Ruth, easy big fella, let’s not hit too many homers. Hey\n"
-                    + "Steve Gutenberg, maybe just make three Police Academy movies. America’s laughed\n"
-                    + "enough.", "Do you have some puritanical hang up on prostitution?\n"
-            + "Dude, it’s the world’s oldest profession.",
-            "Suits are full of joy. They’re the sartorial\n" + "equivalent of a baby’s smile.",
-            "Here’s the mini-cherry on top of the regular cherry on"
-                    + "top of the sundae of awesomeness that is my life.",
-            "A lie is just a great story that someone ruined with the truth.",
-            "It's going to be legen...wait for it...and I hope you're not lactose-intolerant cause the second half of that word is...dairy!",
-            "Article 2: \"A Bro is always entitled to do something stupid, as long as the rest of his Bros are all doing it.",
-            "Believe it or not, I was not always as awesome as I am today",
-            "You know what Marshall needs to do. He needs to stop being sad. When I get sad, I stop being sad, and be awesome instead. True story.",
-            "I believe you and I met for a reason. It's like the universe was saying, \"Hey Barney, there's this dude, he's pretty cool, but it is your job to make him awesome",
-            "Article 100: \"When pulling up to a stoplight, a Bro lowers his window so that all might enjoy his music selection.\"\n"
-                    + "Corollary: \"If there happens to be a hot chick driving the car next to the Bro, the Bro shall put his sunglasses down to get a better look. If he's not wearing his sunglasses, he will first put them on, then pull down to get a better look.",
-            "ARTICLE 54 A Bro is required to go out with his Bros on St. Patty’s Day and other official Bro holidays, including Halloween, New Year’s Eve, and Desperation Day (February 13).",
-            "SCIENCE! There is an 83% correlation between the times men wear boutonnieres and the times they get laid. Think about it, proms, weddings, grandmas funerals...Thanks for the redhead Nana. The everyday boutonniere, by Stinson. ",
-            "ARTICLE 85 If a Bro buys a new car, he is required to pop the hood when showing it off to his Bros. COROLLARY: His Bros are required to whistle, even if they have no idea what they’re whistling at.",
-            "ARTICLE 2 A Bro is always entitled to do something stupid, as long as the rest of his Bros are all doing it.",
-            "For some it was the ashes of my parents. For others it was the trophy from Wimbledon and believe it or not, for one busty dullard, it was both. Game, enormous set and match!",
-            "ARTICLE 41 A Bro never cries.   EXCEPTIONS: Watching Field of Dreams, E.T., or a sports legend retire",
-            "ARTICLE 120 A Bro always calls another Bro by his last name.   EXCEPTION: If a Bro’s last name is also a racial epithet.",
-            "ARTICLE 130 If a Bro learns another Bro has been in a traffic accident, he must first ask what type of car he collided with and whether it got totaled before asking if his Bro is okay."
+            "由于此人出现的时间不固定，\n"
+                    + "他家门口就常出现垃圾",
+            "Okay, 本报就曾报道过王先生家的遭遇，不过直到现在仍未解决。\n"
+                    + "今年3月他在家门口安装了一个监控器。通过监控录像他发现了这名“作案人”。随后记者跟随王先生走进了他的家，根据监控软件调出了12月5日晚上的一段监控录像。时间定格在12月5日19时37分，此时从楼下突然出现了一个人影\n"
+                    + "方似乎知道门上安装了摄像头，所以一直有意躲避。\n"
+                    + "王先生一家人的生活因此受到了严重影响",
+            "此人的行为已经触犯了\n"
+                    + "但被张某拒绝，两人因此发生争执!”",
+            "两名法警将李某带入法庭。65岁的李某中等个头，身材微胖，头发花白，戴着一副眼镜\n"
+                    + "平区某村被害人张某家中\n",
+                   "张某答应赔偿300元医药费，但一直拖着不给。李某说，案发当天，他来到张某家中，两人喝酒聊天!” \n"
+                    + "肢解起来很快，也了解如何下刀不会流血过多\n"
+                    + "示：“我没有杀人故意，是因为醉酒。”说到这里\n"
+                    + "我二姑打电话说一直联系不上\n"
     };
 
     private String[] marshallQuotes = new String[]{
-            "Screw tomorrow, lets go big tonight",
-            "Look at this thing! I'll never have cold pizza again! I'll never have cold pizza again...",
-            "Hey I have given up peeing in the shower for you!",
-            "You're killing me Lily! You're killing me! You have to let me dance my own battles!",
-            "That's weird, you still have an answering machine.",
-            "My goal is to eventually say things that are so sassy and wise, that there is no possible response other than Mm or Mmhm. And if this is a place where we can share our dreams, I like to think that it is, I hope someday, to earn a...testify!",
-            "Oh oh honey sweetie baby. No thirty-two year old woman is happy taking things slow. Trust me, Victoria has got friends from high school posting pictures of second babies on Facebook and you think girlfriend's all like, oh lets just bone a bunch so I'm another year older and still single? Bitch please!",
-            "You smell that? That's the smell of urine that isn't Marvin's.",
-            "Does anyone have six 9-volt batteries?", "Lily lika lika, the honka honka.",
-            "All hail Beercules!",
-            "Come on lay some of that classic Scherbatsky mean son of a bitch on me. Treat me like I'm a girl scout trying to sell you cookies.",
-            "I don't want to be choosing between two girls. I want to be a complete head over heels idiot for one!",
-            "This was bound to happen eventually. I've been trying so hard to suppress like my carefree idiot side that it just rebelled and came out swingin'.",
-            "Whoa did someone say generous endowment? I'm Marshall Eriksen, but you can call me, Beercules!",
-            "There's babies everywhere. It's like a minefield of cuteness. Look at this little bastard. ",
-            "Can I borrow an adult diaper?", "A man can do a lot of living in three hours.",
-            "I don't know, homegirl is pretty diabolical.",
-            "Aw look at you. Had a girlfriend for five minutes and thinking you're playing with the big boy is adorable... Son, I've been in a relathionship since you had a ponytail and you were playing Dave Matthews on your mama's Casio, I'm a good boyfriend in my sleep. I can rock a killer foot rub at one hand and, brew a kick-ass pot of camomile on the other that would make you weap. Hell, I've forgoten more about microwaving fat-free pop-corn and watching Sandra Bullock movies than you'll ever now but, thanks for your concern rook.",
-            "Tell him that I might not be able to give him a grandchild? I don't even know how to have that conversation. ",
-            "I'm freaking out, is there a chance I won't be able to have kids? I've been hit in the nuts a lot.",
-            "Machines are overrated and someone needs to take them down a peg.",
-            "How can you be a New Yorker and never have seen Woody Allen?"
+            "的详细信息?宁波欧欧电商致力于为传统品牌企业提供电子商务一站式解决方案,通过互联网传递品牌价值。为客户提供电子商务规划、品牌营销、店铺设计、平台搭建",
+            "公司办公面积2400平方,是一家为传统的品牌企业提供一站式电子商务外包服务的企业。宁波欧欧电商致力于为传统品牌",
+            "里我们在两个不同的屏幕间定义了相同的transitionName 。当你启动一个新的Activity，它的切换将会自动的动画起来。对于进入和退出的元素，你可以自由编排。!",
+            "式响应用户的触摸事件。你可以通过使用或者继承Theme.Material主题!",
+            "效果中的一个标志是通过延伸一个圆形的面板来展示新的内容。增强了作为所有转换起点的触摸点"
     };
 
     private String[] lilyQuotes = new String[]{
-            "Wow. A genuine Scherbatsky sighting out in nature. At this point, that's like seeing Sasquatch.",
-            "I don't need objectivity. You're my best friend, I just need your support.",
-            "Why say goodbye to the good things?",
-            "You get older, you have kids, you stop stealing, it's sad.",
-            "Here he is. Just as hot as when his Tiger Beat photo spread gave a young girl the courage to explore the suddenly unfamiliar topography of her changing body...The Karate Kid!",
-            "I'm a hick from Brooklyn who's terrified of living more than ten subway stops from where I was born.",
-            "you don't start with the I got caught cheating diamond. You give yourself room to grow.",
+            "频播放平台;是国内首家专注于提供免费、高清网络视频服务的大型视频网站。爱奇艺影视内容丰富多元,涵盖电影、电视剧、综艺、纪录片、动画片",
+            "制团队邀请郭德纲、朱丹等众多大腕联合打造了以德服人, 青春那些",
+            "供当下最新、最火各类好看的电影大片在线观看服务,爱奇",
+            "启动“爱奇艺”品牌并推出全新标志。爱奇艺创始人龚宇博士担任CEO。自成立伊始.",
+            "如要下载 QIYI 的免费 App 爱奇艺视频HD - 奔跑吧兄弟第三季全网独播,请立即获取 iTunes。 已经有 iTunes 了? 现在点击「我有 iTunes」",
+            "阅读评论、比较用户评分、查看屏幕快照并进一步了解“爱奇艺PPS影音-海量电影电视剧综艺视频播放器”。下载“爱奇艺PPS影音-海量电影电视剧综艺视频播放器”,并在您的",
+            "阅读评论、比较用户评分、查看屏幕。下载“爱奇艺PPS影音-海量电影电视剧综艺视频播放器”,并在您的",
             "Okay but hurry, or I'm gonna start doing number eleven on my own. Pilates bitch!",
             "Please help me off the couch so I can storm out!",
-            "Don't say that whore's name in front of our baby!",
-            "Excuse me? I'll have a mojito and you'll have a no seat ho!",
-            "Marshall and I have been together for fifteen years and the only debate about Tommy Boy we've ever had, is whether it's awesome or super awesome. That's love bitch!",
-            " Anytime a single guy hangs out with a married woman there are rules that must be followed. Rule number one: Don't use the husband's condoms, that's just rude.",
-            "Whoa baby you're packing snow balls and you breathe smells like a mermaid's fart.",
-            "Oh Ted, here's another fun little trivia game it's called - name that bitch.",
-            "Let's take a little walk down random skank lane.",
-            "Of course she is upset - take a look at yourself you dumb slut.",
-            "Oh Ted, she's totally got you on the hook.", "Ok, let me try to Canada this up for ya, eh?",
-            "Awe you're so sweet, but, compare to that woman I'm like three day old garbage."
+            "阅读评论、比较用户评分、查看屏幕快照并进一步了解“爱奇艺PPS影音-海量电影电视剧综艺视频播放器”。下载“爱奇艺PPS影音-海量电影电视剧综艺视频播放器”,并在您的",
     };
 
     private String[] robinQuotes = new String[]{
-            "I know I've missed a couple lately but we always said we'd be there for the big moments.",
-            "No I'm not okay, because apparently I'm marrying my dad in a few hours.",
-            "Yeah let's prove that we believe in marriage by workin together to help Marshall hide something from his wife!",
-            "Aren't you tired of waiting for destiny Ted?",
-            "If I stole a scalpel and I cut you open, all I would find is this scared trembling pile of crap. ",
-            "Oh we're bustin' apple bags? I can bust apple bags.",
-            "Robin Sparkles was a cabin-hold name!", "Don't ever, say that to any girl, ever!",
-            "Sometimes in life you have to be assertive and stand up for yourself.",
-            "Well proposing a three way was bad, starting without us was worse, finishing in the hallway was the nail in the coffin.",
-            "If? Ted those kids jumped into a painting and chased a cartoon fox around for fifteen minutes. Spoon full of sugar? Grow up.",
-            "I'm so sorry, you must think I'm totally disgusting. ",
-            "I think the smaller turkey just tried to crawl further inside the bigger turkey.",
-            "Look, I hate most babies, but your baby; I'm going to love that kid so much. I'm going to pick it up and everything.",
-            "I'm going to kill you. I'm going to fly to Chicago, kill you, put your stupid face on a deep dish pizza and eat it. And then maybe catch a Bears game. But mostly the killing and eating your face thing.",
-            "Hey here's some breaking news ... there's a zit breaking out on your forehead!",
-            "On the plus side, he probably killed some roaches on impact."
+            "线损的组成及影响线损的主要因素",
+            "线损组成包括固定损失、可变损失和其它损失。",
+            "固定损失一般不随负荷变动而变化。包括：变压器的铁损(即空载损耗)，电能表电压线圈的损失，电容器和电缆的介质损失等。",
+            "可变损失是随负荷电流的变动而变化的，它与电流的平方成正比，包括：变压器的铜损，输配电线路的线损，接户线的线损，电能表电流线圈的损耗等。",
+            "其它损失是供用电过程中的“跑、冒、滴、漏”造成的损失。包括：计量装置本身的综合误差，或计量装置故障;营业抄收工作中的漏抄",
+            "错抄",
+            "错算及倍率错误等;用户违章用电和窃电;变配电所的所用电;带电设备绝缘不良引起的泄漏损失;供售电量抄表结算时间(周期)不对应;",
+            "统计线损与理论线损统计计算的口径不一致，以及理论计算的误差等。",
+            "降损的主要措施"
     };
 
     private String[] tedQuotes = new String[]{
-            "Just be cool, Lady. Damn.", "It's been a major pleasure, Major Pleasure.",
-            "Here's the secret kids. None of us can vow to be perfect. In the end all we can do is promise to love each other with everything we've got. Because love's the best thing we do.",
-            "It doesn't have to make sense to make sense.",
-            "I refuse to be a part of a third runaway bride situation.",
-            "You will be shocked kids, when you discover how easy it is in life to part ways with people forever. That's why, when you find someone you want to keep around, you do something about it.",
-            "And that's how it goes kids. The friends, neighbors, drinking buddies and partners in crime you love so much when you're young, as the years go by, you just lose touch.",
-            "Singles tables are cruel. I mean what if you went to a wedding and there was a table of all fat guys?",
-            "What followed was a long day and a half for Lily, a really long day and a half. It's kind of insane how much happened in just a day and a half.",
-            "You see the irony here. The only person who could possibly get Barney back on his feet is Barney.",
-            "You know what's weird Stella? Not seeing Star Wars until you're 30.",
-            "I love Barney, but I'm not going to jail for him.",
-            "It would be nice, just once, not to have to go stag to Coin-Con.",
-            "When you believe in people, people come through.",
-            "ight years ago I made an ass of myself chasing after you and I made an ass of myself chasing after you a bunch of times since then. I have no regrets because it led me to something I wouldn't trade for the world, it led to you being my friend. So as your friend and a leading expert in the field of making an ass of yourself. I say to you, from the heart, get the hell out of this car.",
-            "I need to grow up. Oh by the way I'm breaking a jinx swear here so don't tell Barney or he gets to whack me in the nuts three times with a whiffle ball bat. ",
-            "This is gonna be a long jinx. Like Yom Kippur services long. The only difference is Yom Kippur's a fast and this one's gonna be a slow."
+            "农电负荷季节性强、波动大的特点，主变一般应选择2台。可以考虑一大一小的“母子变”，其中小容量主变应能满足低谷时最小负荷。",
+            "②准确预测农村用电负荷，合理确定10kV配电变压器的布点、型号和容量。",
+            "配电变压器的选择应考虑以下几条原则：",
+            "a.配电变压器一般应安装在其供电范围的负荷中心，并满足线路末端电压质量的要求，以减少线路损失。",
+            "b.一台配电变压器最好能带几种性质的负荷(大型冲击性负荷除外)，以便利用各种负荷在时间上的差异，使配电变压器容量得到充分利用。对于排灌站和机井应设置专用变压器，不要接入其它负荷，以便在非排灌季节停用;变压器的经济负载率为60%～70%。",
+            "c.配变的安装位置必须安全、可靠，同时应考虑高低压进出线和维护检修方便等因素。",
+            "d.国家电力公司规定，新建与改造必须使用新型S9系列配电变压器，淘汰64、73系列高耗能变压器。",
+            "③精心勘测设计，合理选择高低压线路路径和导线的规格："
     };
 
     @Override

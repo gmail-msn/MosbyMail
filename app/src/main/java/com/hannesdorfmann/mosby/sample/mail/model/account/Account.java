@@ -29,7 +29,7 @@ import com.hannesdorfmann.parcelableplease.annotation.ParcelablePlease;
 @ParcelablePlease
 public class Account implements Parcelable {
 
-    String name = "Ted Mosby";
+    String name = "Teddy";
     String email = Person.MAIL_TED;
     int imageRes = R.drawable.ted;
 

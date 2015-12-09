@@ -27,13 +27,13 @@ import com.hannesdorfmann.parcelableplease.annotation.ParcelablePlease;
 @ParcelablePlease
 public class Label implements Parcelable {
 
-    public static final String INBOX = "Inbox";
+    public static final String INBOX = "收件箱";
 
-    public static final String TRASH = "Trash";
+    public static final String TRASH = "垃圾箱";
 
-    public static final String SENT = "Sent";
+    public static final String SENT = "发件箱";
 
-    public static final String SPAM = "Spam";
+    public static final String SPAM = "草稿箱";
 
     String name;
     int iconRes;
